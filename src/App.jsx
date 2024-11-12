@@ -6,6 +6,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Home from './pages/Home';
 import CreatePost from './pages/CreatePost';
 import SearchPost from './pages/SearchPost';
+import EditPost from './pages/EditPost';
 
 function RegisterAndLogout() {
   localStorage.clear();
@@ -48,6 +49,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <SearchPost />
+              </ProtectedRoute>
+            }
+          />
+        <Route
+            path="/post/:postId/edit"
+            element={
+              <ProtectedRoute>
+                <EditPost />
               </ProtectedRoute>
             }
           />
