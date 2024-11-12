@@ -36,7 +36,7 @@ function NavbarComponent() {
     <Navbar bg="light" expand="lg" className="mb-4 shadow-sm">
       <Container fluid>
         <Navbar.Brand as={Link} to="/" className="me-3 ps-1">
-          YourApp
+          DNR
         </Navbar.Brand>
 
         <Button variant="danger" className="me-3" onClick={handleCreatePost}>
