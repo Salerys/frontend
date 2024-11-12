@@ -9,6 +9,7 @@ import SearchPost from './pages/SearchPost';
 import EditPost from './pages/EditPost';
 import UserProfile from './pages/User';
 import Settings from './pages/Settings';
+import Comments from './pages/Comments';
 
 function RegisterAndLogout() {
   localStorage.clear();
@@ -75,6 +76,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <Settings />
+              </ProtectedRoute>
+            }
+          />
+        <Route
+            path="/comments/:postId"
+            element={
+              <ProtectedRoute>
+                <Comments />
               </ProtectedRoute>
             }
           />
