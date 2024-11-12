@@ -6,7 +6,7 @@ import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import Loading from './Loading';
 import { Link } from 'react-router-dom';
 
-function FormComponent({route,method}) {
+function FormComponent({ route, method }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
