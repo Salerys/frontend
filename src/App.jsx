@@ -8,6 +8,7 @@ import CreatePost from './pages/CreatePost';
 import SearchPost from './pages/SearchPost';
 import EditPost from './pages/EditPost';
 import UserProfile from './pages/User';
+import Settings from './pages/Settings';
 
 function RegisterAndLogout() {
   localStorage.clear();
@@ -66,6 +67,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <UserProfile />
+              </ProtectedRoute>
+            }
+          />
+        <Route
+            path="/settings"
+            element={
+              <ProtectedRoute>
+                <Settings />
               </ProtectedRoute>
             }
           />
