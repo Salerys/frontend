@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import CreatePost from './pages/CreatePost';
 import SearchPost from './pages/SearchPost';
 import EditPost from './pages/EditPost';
+import UserProfile from './pages/User';
 
 function RegisterAndLogout() {
   localStorage.clear();
@@ -57,6 +58,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <EditPost />
+              </ProtectedRoute>
+            }
+          />
+        <Route
+            path="/user/:username"
+            element={
+              <ProtectedRoute>
+                <UserProfile />
               </ProtectedRoute>
             }
           />
