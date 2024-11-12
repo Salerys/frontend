@@ -69,13 +69,15 @@ function EditPost() {
           required
         />
       </Form.Group>
-      <Button variant="primary" type="submit" className="mt-3 me-2">
-        Update
-      </Button>
-      <Button variant="secondary" onClick={resetForm} className="ml-2 mt-3">
-        Reset
-      </Button>
-      <NavigationButton variant="secondary" url="/" name="Back" />
+        <div className="mt-3">
+          <Button variant="primary" type="submit" className="me-2">
+            Update
+          </Button>
+          <Button variant="secondary" onClick={resetForm} className="ml-2 me-2">
+            Reset
+          </Button>
+          <NavigationButton variant="secondary" url="/" name="Back" />
+        </div>
     </Form>
   );
 }
