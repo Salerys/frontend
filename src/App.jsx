@@ -4,6 +4,8 @@ import Login from './pages/Login';
 import NotFound from './pages/NotFound';
 import ProtectedRoute from './components/ProtectedRoute';
 import Home from './pages/Home';
+import CreatePost from './pages/CreatePost';
+import SearchPost from './pages/SearchPost';
 
 function RegisterAndLogout() {
   localStorage.clear();
@@ -33,6 +35,22 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="*" element={<NotFound />} />
+        <Route
+            path="/post/create"
+            element={
+              <ProtectedRoute>
+                <CreatePost />
+              </ProtectedRoute>
+            }
+          />
+        <Route
+            path="/post/search"
+            element={
+              <ProtectedRoute>
+                <SearchPost />
+              </ProtectedRoute>
+            }
+          />
       </Routes>
     </BrowserRouter>
     </>
