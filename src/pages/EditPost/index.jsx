@@ -9,12 +9,14 @@ function EditPost() {
   const navigate = useNavigate();
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  const [category, setCategory] = useState('');
 
   useEffect(() => {
     const fetchPostData = async () => {
       try {
         const res = await api.get(`/api/posts/${postId}/`);
         setTitle(res.data.title);
+        setCategory(res.data.category);
         setContent(res.data.content);
       } catch (error) {
         console.error('Error fetching post data:', error);
@@ -31,8 +33,7 @@ function EditPost() {
       await api.put(`/api/post/${postId}/update/`, {
         title,
         content,
-        category: 'test',
-        keywords: 'test',
+        category,
       });
       console.log('Post updated successfully');
       navigate('/');
