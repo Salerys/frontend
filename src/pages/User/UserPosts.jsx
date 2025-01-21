@@ -13,6 +13,10 @@ const UserPosts = ({ posts }) => {
     navigate(`/comments/${id}/`);
   };
 
+  const refreshVotedPost = async (postId) => {
+    navigate(`/user/${username}`);
+  };
+
   return (
     <ListGroup>
       {posts.map((post) => (
