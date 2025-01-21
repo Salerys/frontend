@@ -65,9 +65,7 @@ const PostCard = ({ post, handlePostClick, refreshVotedPost, getPosts }) => {
         >
           <Card.Title>{post.title}</Card.Title>
           <Card.Text>
-            {post.content.length > 100
-              ? `${post.content.substring(0, 100)}...`
-              : post.content}
+            {post.content}
           </Card.Text>
 
           <div className="d-flex flex-wrap">
