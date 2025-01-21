@@ -61,7 +61,7 @@ function Settings() {
       <NavigationButton
         variant="secondary"
         url="/"
-        name="Back"
+        name="Main page"
         className="mt-4"
       />
 
