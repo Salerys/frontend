@@ -25,6 +25,7 @@ const UserPosts = ({ posts }) => {
             onClick={() => handleClick(post.id)}
             post={post}
             handlePostClick={(postId) => navigate(`/comments/${postId}`)}
+            refreshVotedPost={refreshVotedPost}
           />
         </ListGroup.Item>
       ))}
