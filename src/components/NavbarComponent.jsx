@@ -35,7 +35,7 @@ function NavbarComponent() {
   return (
     <Navbar bg="light" expand="lg" className="mb-4 shadow-sm">
       <Container fluid>
-        <Navbar.Brand as={Link} to="/" className="me-3 ps-1">
+        <Navbar.Brand as={Link} to="/" className="me-3 ps-1" title="Homepage">
           DNR
         </Navbar.Brand>
 
