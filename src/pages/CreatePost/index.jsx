@@ -9,7 +9,7 @@ import NavigationButton from '../../components/NavigationButton';
 function CreatePost() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState('technology');
   const [tags, setTags] = useState([]);
 
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -37,7 +37,7 @@ function CreatePost() {
   const resetForm = () => {
     setTitle('');
     setContent('');
-    setCategory('');
+    setCategory('technology');
     setTags([]);
   };
 
