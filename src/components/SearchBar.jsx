@@ -15,8 +15,7 @@ function SearchBar() {
 
       console.log(res.data);
     } catch (error) {
-      console.error('Search error:', error);
-      const res=[];
+      navigate('/post/search', { state: { results: [] } });
     }
   };
 
