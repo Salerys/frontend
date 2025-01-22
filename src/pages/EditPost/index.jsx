@@ -9,14 +9,12 @@ function EditPost() {
   const navigate = useNavigate();
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const [category, setCategory] = useState('');
 
   useEffect(() => {
     const fetchPostData = async () => {
       try {
         const res = await api.get(`/api/posts/${postId}/`);
         setTitle(res.data.title);
-        setCategory(res.data.category);
         setContent(res.data.content);
       } catch (error) {
         console.error('Error fetching post data:', error);
@@ -33,7 +31,8 @@ function EditPost() {
       await api.put(`/api/post/${postId}/update/`, {
         title,
         content,
-        category,
+        category: 'test',
+        keywords: 'test',
       });
       console.log('Post updated successfully');
       navigate('/');
@@ -70,15 +69,15 @@ function EditPost() {
           required
         />
       </Form.Group>
-        <div className="mt-3">
-          <Button variant="primary" type="submit" className="me-2">
-            Update
-          </Button>
-          <Button variant="secondary" onClick={resetForm} className="ml-2 me-2">
-            Reset
-          </Button>
-          <NavigationButton variant="secondary" url="/" name="Back" />
-        </div>
+      <div className="mt-3">
+        <Button variant="primary" type="submit" className="me-2">
+          Update
+        </Button>
+        <Button variant="secondary" onClick={resetForm} className="ml-2 me-2">
+          Reset
+        </Button>
+        <NavigationButton variant="secondary" url="/" name="Back" />
+      </div>
     </Form>
   );
 }
